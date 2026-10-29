@@ -1,4 +1,4 @@
-const BASE = (import.meta.env.VITE_API_URL || 'http://localhost:4000').replace(/\/$/, '');
+const BASE = (import.meta.env.VITE_API_URL || 'https://hooklab-9jck.onrender.com').replace(/\/$/, '');
 async function request(path, options = {}) {
   let response;
   try { response = await fetch(`${BASE}${path}`, { ...options, headers: { ...(options.body ? { 'Content-Type': 'application/json' } : {}), ...(options.headers || {}) } }); }
